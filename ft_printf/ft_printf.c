@@ -12,11 +12,11 @@ static int	ft_nbrlen(long n, int base_len)
 	return (i);
 }
 
-static void	ft_putnbr(long nbr, int base_len, char *base)
+static void	ft_putnbr(long n, int base_len, char *base)
 {
-	if (nbr >= base_len)
-		ft_putnbr(nbr / base_len, base_len, base);
-	write(1, &base[nbr % base_len], 1);
+	if (n >= base_len)
+		ft_putnbr(n / base_len, base_len, base);
+	write(1, &base[n % base_len], 1);
 }
 
 int		ft_printf(const char *format, ...)
